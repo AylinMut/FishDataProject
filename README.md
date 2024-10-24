@@ -99,3 +99,5 @@ The model was evaluated with accuracy rates on training and test sets:
 ---
 
 ## Kaggle Notebook Link
+- https://www.kaggle.com/code/aylinmut/fishdataprojectwithann
+  
