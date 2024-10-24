@@ -1,31 +1,38 @@
 # FishDataProject
-# Balık Görüntü Sınıflandırma Modeli
+# General Introduction
 
-Bu proje, TensorFlow kullanarak bir balık türü sınıflandırma modeli geliştirmeyi amaçlar. Projede, Kaggle üzerindeki **A Large Scale Fish Dataset** veri kümesi kullanılmıştır. Model, balık görüntülerini sınıflandırmak için derin öğrenme teknikleri ve tam bağlantılı yapay sinir ağlarını (Dense Neural Networks) kullanır.
-
----
-
-## İçindekiler
-
-- [Proje Hakkında](#proje-hakkında)
-- [Kullanılan Teknolojiler ve Kütüphaneler](#kullanılan-teknolojiler-ve-kütüphaneler)
-- [Veri Kümesi](#veri-kümesi)
-- [Model Eğitimi](#model-eğitimi)
-- [Sonuçlar](#sonuçlar)
-- [Kurulum](#kurulum)
-- [Kullanım](#kullanım)
-- [Görselleştirmeler](#görselleştirmeler)
-- [Lisans](#lisans)
+This project was developed as part of the **Akbank Deep Learning Bootcamp** using the **A Large Scale Fish Dataset** dataset available on Kaggle. It aims to develop a fish species classification model using TensorFlow. The model uses deep learning techniques and an artificial neural network (ANN) model to classify fish images.
 
 ---
 
-## Proje Hakkında
+## Contents
 
-Bu proje, Kaggle üzerinde bulunan **balık görüntü veri kümesini** kullanarak her bir balık türünü doğru şekilde sınıflandırmayı hedefler. Veriler işlendikten sonra, sinir ağı modeli eğitilmiş ve sonuçları değerlendirilmiştir. Eğitim süreci boyunca erken durdurma (early stopping) ve öğrenme hızının azaltılması (ReduceLROnPlateau) gibi yöntemler kullanılmıştır.
+- [PurposeOfTheProject](#purpose-of-the-project)
+- [Technologies and Libraries Used](#technologies-and-libraries-used)
+- [Dataset](#dataset)
+- [Model Training](#model-training)
+- [Results](#results)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Visualizations](#visualizations)
+- [License](#license)
 
 ---
 
-## Kullanılan Teknolojiler ve Kütüphaneler
+## Purpose of the Project
+
+The purpose of this project is to build a deep learning model capable of accurately classifying different fish species based on their images. Through this project, participants aim to gain hands-on experience in critical steps of deep learning, including data preprocessing, model development, training, and evaluation. This work focuses on:
+
+Developing a practical deep learning classification model using artificial neural networks (ANN).
+Enhancing skills in data preprocessing, especially dealing with image datasets.
+Implementing optimization techniques such as early stopping and learning rate adjustments to prevent overfitting and improve model performance.
+Evaluating model performance using metrics like accuracy, loss curves, and confusion matrices.
+Gaining familiarity with Kaggle as a development and deployment environment, leveraging it for collaborative coding and sharing results.
+This project not only helps participants apply theoretical concepts in real-world scenarios but also prepares them for future challenges in computer vision and deep learning domains.
+
+---
+
+## Technologies and Libraries Used
 
 - Python
 - TensorFlow & Keras
@@ -37,16 +44,19 @@ Bu proje, Kaggle üzerinde bulunan **balık görüntü veri kümesini** kullanar
 
 ---
 
-## Veri Kümesi
+## Dataset
 
-Veri kümesi, balık görüntülerini içerir ve her görüntü farklı türleri temsil eder. Eğitim seti %80, test seti %20 olarak ayrılmış ve eğitim seti ayrıca %10 oranında doğrulama seti için bölünmüştür.
+The dataset contains fish images and each image represents different species. The training set is divided into 80%, the test set is divided into 20% and the training set is further divided into 10% for the validation set.
 
-Veri ön işleme adımları:
+Data preprocessing steps:
 
-1. Yalnızca `.png` formatındaki görüntüler yüklenir.
-2. Görüntüler 28x28 boyutuna yeniden boyutlandırılır.
-3. Normalizasyon yapılır (0-1 aralığına getirilen piksel değerleri).
-4. Etiketler, sayısal değerlere dönüştürülür ve One-Hot Encoding yöntemiyle işlenir.
+1. Only images in `.png` format are uploaded.
+
+2. Images are resized to 28x28.
+
+3. Normalization is performed (pixel values ​​are brought to the range of 0-1).
+
+4. Labels are converted to numerical values ​​and processed using the One-Hot Encoding method.
 
 ---
 
