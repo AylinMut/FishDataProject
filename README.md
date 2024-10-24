@@ -13,7 +13,6 @@ This project was developed as part of the **Akbank Deep Learning Bootcamp** usin
 - [ModelTraining](#model-training)
 - [ModelCompilation](#model-complation)
 - [Results](#results)
-- [Installation](#installation)
 - [KaggleNotebookLink](#kaggle-notebook-link)
 
 
