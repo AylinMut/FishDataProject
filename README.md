@@ -9,13 +9,13 @@ This project was developed as part of the **Akbank Deep Learning Bootcamp** usin
 
 - [PurposeOfTheProject](#purpose-of-the-project)
 - [Technologies and Libraries Used](#technologies-and-libraries-used)
-- [Dataset](#dataset)
-- [Model Training](#model-training)
+- [DatasetDescription](#dataset-description)
+- [ModelTraining](#model-training)
+- [ModelCompilation](#model-complation)
 - [Results](#results)
 - [Installation](#installation)
-- [Usage](#usage)
-- [Visualizations](#visualizations)
-- [License](#license)
+- [KaggleNotebookLink](#kaggle-notebook-link)
+
 
 ---
 
@@ -23,12 +23,17 @@ This project was developed as part of the **Akbank Deep Learning Bootcamp** usin
 
 The purpose of this project is to build a deep learning model capable of accurately classifying different fish species based on their images. Through this project, participants aim to gain hands-on experience in critical steps of deep learning, including data preprocessing, model development, training, and evaluation. This work focuses on:
 
-Developing a practical deep learning classification model using artificial neural networks (ANN).
-Enhancing skills in data preprocessing, especially dealing with image datasets.
-Implementing optimization techniques such as early stopping and learning rate adjustments to prevent overfitting and improve model performance.
-Evaluating model performance using metrics like accuracy, loss curves, and confusion matrices.
-Gaining familiarity with Kaggle as a development and deployment environment, leveraging it for collaborative coding and sharing results.
-This project not only helps participants apply theoretical concepts in real-world scenarios but also prepares them for future challenges in computer vision and deep learning domains.
+- Developing a practical deep learning classification model using artificial neural networks (ANN).
+
+- Enhancing skills in data preprocessing, especially dealing with image datasets.
+
+- Implementing optimization techniques such as early stopping and learning rate adjustments to prevent overfitting and improve model performance.
+
+- Evaluating model performance using metrics like accuracy, loss curves, and confusion matrices.
+
+- Gaining familiarity with Kaggle as a development and deployment environment, leveraging it for collaborative coding and sharing results.
+
+- This project not only helps participants apply theoretical concepts in real-world scenarios but also prepares them for future challenges in computer vision and deep learning domains.
 
 ---
 
@@ -40,11 +45,11 @@ This project not only helps participants apply theoretical concepts in real-worl
 - NumPy
 - Matplotlib & Seaborn
 - scikit-learn (LabelEncoder, train_test_split)
-- OpenCV (Görüntü işleme için)
+- OpenCV
 
 ---
 
-## Dataset
+## Dataset Description
 
 The dataset contains fish images and each image represents different species. The training set is divided into 80%, the test set is divided into 20% and the training set is further divided into 10% for the validation set.
 
@@ -60,51 +65,38 @@ Data preprocessing steps:
 
 ---
 
-## Model Eğitimi
+## Model Training
 
-Model, **Dense Neural Network** mimarisi kullanılarak oluşturulmuştur. Yapısı şu şekildedir:
+The model is built using the **Dense Neural Network** architecture. Its structure is as follows:
 
-- **Giriş Katmanı**: 28x28x3 (RGB görüntüler için)
-- **Gizli Katmanlar**: 512, 256, 128, ve 64 nöronlu katmanlar. 
-  - Her katmandan sonra **Batch Normalization** ve **Dropout (0.3)** uygulanır.
-- **Çıkış Katmanı**: 9 sınıf için `softmax` aktivasyon fonksiyonu.
+- **Input Layer**: 28x28x3 (for RGB images)
+- **Hidden Layers**: Layers with 512, 256, 128, and 64 neurons.
+- **Batch Normalization** and **Dropout** are applied after each layer.
+- **Output Layer**: `softmax` activation function for 9 classes.
 
-### Model Derleme
+### Model Compilation
 
-- **Optimizasyon**: Adam Optimizer (öğrenme oranı = 0.0001)
-- **Kayıp Fonksiyonu**: Categorical Crossentropy
-- **Başarı Ölçütü**: Accuracy (Doğruluk)
-
----
-
-## Sonuçlar
-
-Model, eğitim ve test setleri üzerinde doğruluk oranları ile değerlendirilmiştir:
-
-- **Eğitim Verisi**:
-  - Kayıp: `Train Loss`
-  - Doğruluk: `Train Accuracy`
-
-- **Test Verisi**:
-  - Kayıp: `Test Loss`
-  - Doğruluk: `Test Accuracy`
-
-### Eğitim Sonuçlarının Grafikleri
-
-1. Eğitim ve doğrulama doğruluğu grafiği.
-2. Eğitim ve doğrulama kaybı grafiği.
-
-### Karışıklık Matrisi (Confusion Matrix)
-
-Test verisi üzerindeki tahminlerin doğruluğunu gösteren bir karışıklık matrisi görselleştirilmiştir.
+- **Optimization**: Adam Optimizer
+- **Loss Function**: Categorical Crossentropy
+- **Success Measure**: Accuracy
 
 ---
 
-## Kurulum
+## Results
 
-Bu projeyi çalıştırmak için aşağıdaki adımları izleyebilirsiniz:
+The model was evaluated with accuracy rates on training and test sets:
 
-1. Bu projeyi klonlayın:
-   ```bash
-   git clone https://github.com/kullanici_adi/proje_adi.git
-   cd proje_adi
+- **Train Data**:
+- Loss: `Train Loss`
+- Accuracy: `Train Accuracy`
+
+- **Test Data**:
+- Loss: `Test Loss`
+- Accuracy: `Test Accuracy`
+
+- **Confusion Matrix**:
+- A confusion matrix is ​​visualized showing the accuracy of the predictions on the test data.
+
+---
+
+## Kaggle Notebook Link
